@@ -94,12 +94,12 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://veremezk.org',
+          href: 'https://verimezk.org',
           label: 'Website',
           position: 'right',
         },
         {
-          href: 'https://x.com/veremezk',
+          href: 'https://x.com/verimezk',
           label: 'X',
           position: 'right',
         },
