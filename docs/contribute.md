@@ -5,38 +5,30 @@ keywords: [VeriMeZK, contribute, open source, GitHub, community]
 slug: /contribute
 ---
 
-# 🤝 Contribute
+# Contribute
 
-We welcome contributions from developers, designers, and privacy advocates!
+We welcome contributions from developers, designers, security researchers, and privacy advocates.
 
----
+## How to Contribute
 
-## 🧰 How to contribute
+1. Fork the repository.
+2. Create a feature branch that describes your change.
+3. Open a pull request with context and testing notes.
 
-1. Fork the repo
-2. Create a feature branch
-3. Submit a pull request
+## Contribution Guidelines
 
----
+- Follow the existing code style and lint rules.
+- Write clear commit messages and describe the problem solved.
+- Update documentation or examples when behavior changes.
 
-## 📋 Guidelines
+## Where Help Is Most Valuable
 
-- Follow the code style
-- Write clear commit messages
-- Document your changes
+- New proof templates and verification rules
+- UX and interface refinements
+- Smart-contract audits and security reviews
+- Localization and documentation improvements
 
----
-
-## 🧪 Areas to help
-
-- New proof templates
-- UI improvements
-- Smart contract audits
-- Translations
-
----
-
-## 💬 Join the community
+## Join the Community
 
 - [GitHub Discussions](https://github.com/VeriMeZK/VeriMeZK/discussions)
 - [Discord](https://verimezk.org/discord)

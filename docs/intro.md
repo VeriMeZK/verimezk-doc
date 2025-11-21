@@ -2,30 +2,30 @@
 title: Intro
 ---
 
-# Welcome to VeriMeZK Documentation
+# Welcome to the VeriMeZK Documentation
 
-**VeriMeZK** is a lightweight, open-source toolkit for zero-knowledge identity verification. It enables users to prove attributes of their identity (like age or nationality) without revealing the underlying data — all processed locally, with optional on-chain verification via the **Midnight** blockchain.
+**VeriMeZK** is a lightweight, open-source toolkit for privacy-preserving identity verification. It lets users prove attributes, such as age or nationality, without disclosing the underlying data. Everything runs locally, with optional verification on the **Midnight** blockchain.
 
-## 🔍 What is VeriMeZK?
+## What Is VeriMeZK?
 
-VeriMeZK allows developers to integrate privacy-preserving identity checks into their applications. It combines:
+VeriMeZK enables developers to embed zero-knowledge identity checks into their applications. The toolkit combines:
 
-- Document scanning (e.g., passports, ID cards)
-- Face verification with liveness detection
+- Document scanning for passports and ID cards
+- Face verification with built-in liveness detection
 - Local generation of zero-knowledge proofs (ZKPs)
-- Optional on-chain verification using Midnight
+- Optional on-chain verification powered by Midnight
 
-## ✨ Key Features
+## Key Capabilities
 
-- **Zero-Knowledge Proofs**: Prove facts without revealing personal data
-- **Client-Side Processing**: No data leaves the user’s device
-- **Blockchain Integration**: Verify proofs on-chain using Midnight
-- **Custom Checks**: Define your own logic (e.g., “is over 18”, “is from EU”)
+- **Zero-knowledge proofs** validate facts without exposing personal data.
+- **Client-side processing** keeps sensitive information on the user's device.
+- **Blockchain integration** provides on-chain verification when required.
+- **Custom checks** allow teams to define business-specific rules (for example, "is over 18" or "is an EU resident").
 
-## 🚀 Who is this for?
+## Who Should Use VeriMeZK?
 
-- Developers building privacy-first apps
-- dApp creators needing KYC without data storage
-- Anyone interested in decentralized identity and ZKPs
+- Teams building privacy-first applications
+- dApp creators who need KYC assurances without storing identity data
+- Anyone evaluating decentralized identity and ZKP-native workflows
 
-Let’s get started!
+Choose a guide from the sidebar to dive deeper into the platform.

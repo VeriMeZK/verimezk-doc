@@ -5,47 +5,38 @@ keywords: [VeriMeZK, architecture, design, modules, privacy, client-side, ZK]
 slug: /architecture
 ---
 
-# 🏗️ Architecture Overview
+# Architecture Overview
 
-VeriMeZK is designed as a **modular, client-side toolkit** for privacy-preserving identity verification using zero-knowledge proofs.
+VeriMeZK is a **modular, client-side toolkit** for privacy-preserving identity verification based on zero-knowledge proofs.
 
----
+## Core Components
 
-## 🧱 Key Components
+- **Document scanner** extracts MRZ data from passports and identity cards.
+- **Face verifier** performs liveness detection and biometric matching.
+- **Proof engine** generates ZKPs according to the selected rules.
+- **Verifier** validates proofs on-chain (via Midnight) or off-chain.
+- **UI layer** provides reference interfaces and SDK hooks.
 
-- **Document Scanner**: Extracts MRZ data from passports/IDs
-- **Face Verifier**: Performs liveness detection and biometric match
-- **Proof Engine**: Generates ZKPs based on selected rules
-- **Verifier**: Validates proofs on-chain (Midnight) or off-chain
-- **UI Layer**: Demo interface and SDK hooks
+## Data Flow
 
----
+1. A document is scanned and the MRZ data is extracted.
+2. Face verification confirms liveness and biometric match.
+3. The user or integrator selects the rule to be proven.
+4. A zero-knowledge proof is generated locally.
+5. The proof is verified and a result is returned to the application.
 
-## 🔄 Data Flow
+:::tip
+**All processing remains on the user's device.** No identity data is transmitted to external services.
+:::
 
-1. User scans document → MRZ extracted
-2. Face is verified → biometric match confirmed
-3. Rule is selected → ZK proof generated
-4. Proof is verified → result returned
+## Privacy by Design
 
-<div class="tip">
+- No backend services are required.
+- Identity data is never stored.
+- Third-party APIs are not involved in the verification flow.
+- All logic executes within the browser environment.
 
-💡 **All processing is local**. No data is sent to external servers.
+## Extensibility
 
-</div>
-
----
-
-## 🔐 Privacy by Design
-
-- No backend required
-- No data storage
-- No third-party APIs
-- All logic runs in the browser
-
----
-
-## 🧩 Extensibility
-
-- Add new rules via [Custom Checks](./features/custom-checks.md)
-- Integrate with dApps via [SDK](./api/sdk-overview.md)
+- Add new rules with [Custom Checks](./features/custom-checks.md).
+- Integrate the workflow into applications using the [SDK](./api/sdk-overview.md).

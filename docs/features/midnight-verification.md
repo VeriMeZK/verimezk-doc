@@ -6,59 +6,45 @@ keywords:
 slug: /features/midnight-verification
 ---
 
-# ⛓️ Midnight Verification
+# Midnight Verification
 
-VeriMeZK integrates with the **Midnight blockchain** to allow on-chain verification of zero-knowledge proofs — without compromising user privacy.
+VeriMeZK integrates with the **Midnight blockchain** to enable on-chain verification of zero-knowledge proofs without compromising user privacy.
 
----
+## Why Midnight?
 
-## 🧠 Why Midnight?
+Midnight is a privacy-focused blockchain designed for confidential smart contracts. It supports zero-knowledge proofs and prevents sensitive data from appearing on-chain.
 
-Midnight is a privacy-focused blockchain designed for confidential smart contracts. It supports ZKPs and ensures that sensitive data is never exposed on-chain.
+## How On-Chain Verification Works
 
----
+1. The user connects a compatible wallet through the application.
+2. The zero-knowledge proof is submitted to a Midnight smart contract.
+3. The contract checks the proof against the requested rule.
+4. The contract returns a success or failure result to the application.
 
-## 🔗 How on-chain verification works
+:::tip
+Midnight contracts can verify logic such as "is over 18" or "is a citizen of country X" without storing personal data.
+:::
 
-1. The user connects a wallet (e.g. via dApp interface)
-2. The ZK proof is submitted to a smart contract
-3. The contract verifies the proof against the selected rule
-4. A result (valid/invalid) is returned
+## Requirements
 
-<div class="tip">
+- Wallet connector (for example, a Midnight-compatible Web3 wallet)
+- Testnet funds or mainnet tokens to cover gas fees
+- A deployed smart contract with the required verification logic
 
-💡 **Tip**: Midnight contracts are designed to verify logic like “is over 18” or “is citizen of X” without storing any personal data.
-
-</div>
-
----
-
-## 🧰 Requirements
-
-- Wallet connector (e.g. Midnight-compatible Web3 wallet)
-- Testnet funds (for gas fees)
-- Smart contract deployed with verification logic
-
----
-
-## 🧪 Example use case
+## Example Use Case
 
 A dApp wants to restrict access to users over 21:
 
-- The user generates a ZK proof locally
-- The proof is submitted to the Midnight contract
-- If valid, access is granted — without revealing age or identity
+- The user generates a proof locally in VeriMeZK.
+- The proof is submitted to the Midnight contract.
+- If the proof validates, the dApp grants access without learning the user's exact age.
 
----
+## Privacy
 
-## 🔒 Privacy
+- Document data is never stored on-chain.
+- Biometric information is not transmitted.
+- Only the proof artifact and the requested rule are present in the transaction payload.
 
-- No document data is stored on-chain
-- No face data or biometric info is transmitted
-- Only the proof and rule are used in the transaction
+## Next Step
 
----
-
-## ⏭️ Next step
-
-You can also define [custom verification rules](./custom-checks.md) to tailor the logic to your app’s needs.
+Define bespoke rules with [custom checks](./custom-checks.md) to tailor Midnight verification to your product requirements.

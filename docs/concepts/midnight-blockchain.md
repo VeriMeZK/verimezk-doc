@@ -6,55 +6,43 @@ keywords:
 slug: /concepts/midnight-blockchain
 ---
 
-# 🌑 Midnight Blockchain
+# Midnight Blockchain
 
-**Midnight** is a privacy-first blockchain that supports confidential smart contracts and zero-knowledge proof verification. VeriMeZK uses Midnight to enable **on-chain identity verification** — without compromising user privacy.
+**Midnight** is a privacy-first blockchain that supports confidential smart contracts and zero-knowledge proof verification. VeriMeZK uses Midnight to deliver on-chain identity verification without exposing personal data.
 
----
+## Why Midnight?
 
-## 🧠 Why Midnight?
+Midnight is built for:
 
-Midnight is designed for:
+- Confidential smart contracts
+- Zero-knowledge-friendly architecture
+- Decentralised identity use cases
+- Regulatory compliance without data leakage
 
-- **Confidential smart contracts**
-- **ZK-friendly architecture**
-- **Decentralized identity use cases**
-- **Regulatory compliance without data exposure**
+## How VeriMeZK Uses Midnight
 
----
+1. A user generates a zero-knowledge proof locally.
+2. The proof is submitted to a smart contract on Midnight.
+3. The contract verifies the proof against the requested rule.
+4. The result can be referenced within a dApp or stored for audit trails.
 
-## 🔗 How VeriMeZK uses Midnight
+:::tip
+A DAO running on Midnight can require an "over 18" proof to vote without ever receiving the voter's age.
+:::
 
-1. A user generates a ZK proof locally
-2. The proof is submitted to a smart contract on Midnight
-3. The contract verifies the proof against the rule
-4. The result is stored or used in a dApp
+## Privacy by Design
 
-<div class="tip">
+- No personal data is stored on-chain.
+- Document and biometric data remain on the user's device.
+- Only the proof artifact and associated rule are included in the transaction.
 
-💡 **Example**: A DAO on Midnight can require “over 18” proof to vote — without knowing your age.
+## Integration Requirements
 
-</div>
+- Wallet connection compatible with Midnight
+- Smart contract containing the desired verification logic
+- Optional front-end dApp powered by the VeriMeZK SDK
 
----
-
-## 🔒 Privacy by design
-
-- No personal data is stored on-chain
-- No document or biometric data is revealed
-- Only the proof and rule are submitted
-
----
-
-## 🧰 Integration requirements
-
-- Wallet connection (Midnight-compatible)
-- Smart contract with verification logic
-- Optional: frontend dApp using VeriMeZK SDK
-
----
-
-## 🧩 Related topics
+## Related Topics
 
 - [Midnight Verification](../features/midnight-verification.md)
 - [Architecture Overview](../architecture.md)

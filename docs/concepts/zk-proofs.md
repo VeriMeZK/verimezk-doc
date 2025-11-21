@@ -6,59 +6,44 @@ keywords:
 slug: /concepts/zk-proofs
 ---
 
-# 🧠 Zero-Knowledge Proofs (ZKPs)
+# Zero-Knowledge Proofs (ZKPs)
 
-Zero-knowledge proofs (ZKPs) are the cryptographic foundation of VeriMeZK. They allow users to **prove something is true without revealing the underlying data**.
+Zero-knowledge proofs are the cryptographic foundation of VeriMeZK. They let users **prove that a statement is true without revealing the underlying data**.
 
----
+## What Is a ZKP?
 
-## 🧪 What is a ZKP?
+A zero-knowledge proof allows one party (the prover) to convince another party (the verifier) that a statement is correct, while revealing no additional information beyond the validity of the statement.
 
-A **zero-knowledge proof** is a method by which one party (the prover) can convince another party (the verifier) that a statement is true, **without revealing any additional information**.
+## Real-World Analogy
 
----
+Imagine proving you are over 18 without showing your ID. A ZKP enables exactly that experience: the verifier gains confidence in the claim, but sees no personal details.
 
-## 🧍 Real-world analogy
+:::tip
+For example, you can prove "I am over 18" without exposing your birthdate.
+:::
 
-Imagine you want to prove you're over 18 without showing your ID.  
-A ZKP lets you do exactly that: prove the fact, not the data.
+## Why ZKPs Matter for Identity
 
-<div class="tip">
+- **Privacy:** Personal data is never exposed.
+- **Security:** Sensitive information is not transmitted or stored.
+- **Compliance:** Supports KYC/AML checks without data retention.
+- **User control:** Individuals choose what to disclose and when.
 
-💡 **Example**: “I’m over 18” is proven without revealing your birthdate.
+## Proof Types in VeriMeZK
 
-</div>
+- Age verification (for example, over 18 or over 21)
+- Nationality confirmation (for example, an EU citizen)
+- Document validity (not expired or revoked)
+- Biometric match (face matches the document image)
 
----
+## How It Works in VeriMeZK
 
-## 🔐 Why ZKPs matter for identity
+1. Document and face data are captured locally.
+2. The user selects a rule to prove (for example, "is an adult").
+3. A ZK proof is generated in the browser.
+4. The proof is shared with a verifier on-chain or off-chain.
 
-- **Privacy**: No personal data is exposed
-- **Security**: No sensitive info is transmitted or stored
-- **Compliance**: Enables KYC/AML checks without data retention
-- **User control**: The user decides what to prove and when
-
----
-
-## 🧰 Types of proofs in VeriMeZK
-
-- **Age verification** (e.g. over 18, over 21)
-- **Nationality check** (e.g. is EU citizen)
-- **Document validity** (e.g. not expired)
-- **Biometric match** (e.g. face matches document)
-
----
-
-## ⚙️ How it works in VeriMeZK
-
-1. Document and face data are scanned locally
-2. A rule is selected (e.g. “is adult”)
-3. A ZK proof is generated in the browser
-4. The proof is shared with a verifier (on-chain or off-chain)
-
----
-
-## 🧩 Learn more
+## Learn More
 
 - [Proof Generation](../features/proof-generation.md)
 - [Custom Checks](../features/custom-checks.md)

@@ -14,26 +14,22 @@ keywords:
 slug: /getting-started/quickstart
 ---
 
-# ⚡ Quickstart
+# Quickstart
 
-This guide walks you through a full identity verification flow using **VeriMeZK** — from scanning a document to generating a zero-knowledge proof and verifying it on the **Midnight** blockchain.
+This walkthrough demonstrates the full VeriMeZK verification flow, from scanning a document to generating and verifying a zero-knowledge proof on the **Midnight** blockchain.
 
----
+## What You'll Learn
 
-## 🧭 What You'll Learn
-
-- How to scan an identity document (e.g. passport)
+- How to scan an identity document such as a passport
 - How to perform face verification with liveness detection
 - How to generate a zero-knowledge proof (ZKP)
 - How to verify the proof on-chain using Midnight
 
----
-
-## 🚀 Step-by-Step Demo
+## Step-by-Step Demo
 
 ### 1. Launch the local demo
 
-If you haven’t already, start the dev server:
+If you haven't already, start the dev server:
 
 ```bash
 npm run dev
@@ -49,17 +45,15 @@ You should see the VeriMeZK interface.
 
 ---
 
-### 2. Scan your identity document
+### 2. Scan an identity document
 
 - Click **"Scan Document"**
 - Use your webcam or upload a passport/ID image
 - The app will extract MRZ (Machine Readable Zone) data
 
-<div class="tip">
-
-💡 **Tip**: You can use a sample passport image for testing. No real data is stored or sent anywhere.
-
-</div>
+:::tip
+Use a sample passport image for testing. No real identity data is stored or transmitted.
+:::
 
 ---
 
@@ -79,11 +73,9 @@ This step ensures the user is real and matches the document photo.
 - Choose a rule (e.g. "Over 18", "Is EU citizen")
 - The app will compute a zero-knowledge proof locally
 
-<div class="tip">
-
-🔐 **Privacy First**: The proof confirms the rule is true — without revealing your actual age, nationality, or identity.
-
-</div>
+:::note
+The proof confirms the rule without revealing raw attributes such as age, nationality, or identity.
+:::
 
 ---
 
@@ -93,19 +85,17 @@ This step ensures the user is real and matches the document photo.
 - The proof is submitted to a smart contract on Midnight
 - The contract checks the validity without accessing your data
 
-<div class="warning">
-
-⚠️ **Note**: On-chain verification requires a connected wallet and testnet funds. You can skip this step if you're testing offline.
-
-</div>
+:::warning
+On-chain verification requires a connected wallet and testnet funds. Skip this step when testing offline.
+:::
 
 ---
 
-## ✅ Success!
+## Success!
 
-You’ve completed a full privacy-preserving identity check using VeriMeZK.
+You have completed a full privacy-preserving identity check using VeriMeZK.
 
-Want to go deeper?
+Continue exploring:
 
 - [Explore core features](../features/document-scanning.md)
 - [Understand the architecture](../architecture.md)

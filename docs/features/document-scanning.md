@@ -6,45 +6,30 @@ keywords:
 slug: /features/document-scanning
 ---
 
-# 🧾 Document Scanning
+# Document Scanning
 
-VeriMeZK supports scanning of identity documents such as passports and ID cards using **MRZ (Machine Readable Zone)** recognition. This is the first step in the identity verification flow.
+VeriMeZK supports scanning identity documents, such as passports and ID cards, using **MRZ (Machine Readable Zone)** recognition. Document scanning is the first step in the verification flow.
 
----
+## How It Works
 
-## 🧠 How it works
+- The user scans or uploads a document (for example, a passport).
+- The system extracts the MRZ using optical character recognition (OCR).
+- Extracted data is parsed into structured fields such as full name, birthdate, nationality, document number, and expiration date.
 
-- The user scans or uploads a document (e.g. passport)
-- The system extracts the MRZ zone using OCR (Optical Character Recognition)
-- The extracted data is parsed into structured fields:
-  - Full name
-  - Date of birth
-  - Nationality
-  - Document number
-  - Expiration date
+:::tip
+VeriMeZK uses a lightweight OCR engine optimized for browser environments. No document data is sent to external servers.
+:::
 
-<div class="tip">
+## Supported Input Methods
 
-💡 **Tip**: VeriMeZK uses a lightweight OCR engine optimized for browser environments. No data is sent to any server.
+- **Webcam capture** for live scans
+- **Image upload** supporting JPG, PNG, or PDF
 
-</div>
+:::warning
+Ensure the MRZ zone is legible and well lit. Blurry or cropped images are likely to fail during parsing.
+:::
 
----
-
-## 📷 Supported input methods
-
-- **Webcam capture** (live scan)
-- **Image upload** (JPG, PNG, PDF)
-
-<div class="warning">
-
-⚠️ **Note**: Make sure the MRZ zone is clearly visible and well-lit. Blurry or cropped images may fail to parse.
-
-</div>
-
----
-
-## 🧪 Sample MRZ
+## Sample MRZ
 
 Example of a valid MRZ (from a passport):
 
@@ -53,16 +38,12 @@ P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L898902C36UTO7408122F1204159ZE184226B<<<<<10
 ```
 
----
+## Privacy
 
-## 🔐 Privacy
+- Scanning and parsing occur locally in the browser.
+- Document data is neither stored nor transmitted.
+- Only structured fields feed into subsequent proof generation.
 
-- All scanning and parsing happens **locally in the browser**
-- No document data is stored or transmitted
-- Only the extracted fields are used to generate ZK proofs
+## Next Step
 
----
-
-## ⏭️ Next step
-
-Once the document is scanned, the user proceeds to [Face Verification](./face-verification.md) to confirm liveness and identity match.
+After document scanning, proceed to [Face Verification](./face-verification.md) to confirm liveness and identity matching.

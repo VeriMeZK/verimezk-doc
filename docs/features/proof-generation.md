@@ -5,54 +5,42 @@ keywords: [VeriMeZK, proof generation, zero-knowledge, zk, identity, privacy]
 slug: /features/proof-generation
 ---
 
-# 🧠 Proof Generation
+# Proof Generation
 
-VeriMeZK allows users to generate **zero-knowledge proofs (ZKPs)** that confirm specific identity attributes — without revealing the underlying data.
+VeriMeZK enables users to generate **zero-knowledge proofs (ZKPs)** that confirm specific identity attributes without exposing the underlying data.
 
----
+## What Is a ZK Proof?
 
-## 🔍 What is a ZK Proof?
+A zero-knowledge proof lets someone show that a statement, such as "I am over 18," is true without disclosing supporting personal information like a birthdate.
 
-A **zero-knowledge proof** is a cryptographic method that lets someone prove a statement is true (e.g. “I’m over 18”) without revealing _why_ it’s true (e.g. their actual birthdate).
+## How VeriMeZK Generates Proofs
 
----
+1. The user selects a rule (for example, "Over 18" or "Is an EU citizen").
+2. The application draws on the scanned document data and face-match result.
+3. A ZK proof is computed locally in the browser.
+4. The proof is formatted for on-chain or off-chain verification.
 
-## ⚙️ How VeriMeZK generates proofs
+:::note
+No personal data leaves the device. Only the proof and the associated rule are shared.
+:::
 
-1. The user selects a rule (e.g. "Over 18", "Is EU citizen")
-2. The app uses scanned document data and face match result
-3. A ZK proof is computed locally in the browser
-4. The proof is formatted for on-chain or off-chain verification
+## Example
 
-<div class="tip">
+Consider a user who wants to prove they are over 18:
 
-🔐 **Privacy First**: No personal data is exposed. Only the proof and the rule are shared.
+- The app reads the birthdate from the scanned document.
+- A ZK proof is computed to confirm the user meets the age requirement.
+- The proof can be verified, yet the exact birthdate remains private.
 
-</div>
-
----
-
-## 🧪 Example
-
-Let’s say the user wants to prove they’re over 18:
-
-- The app checks the birthdate from the scanned document
-- It computes a ZK proof that confirms the age is ≥ 18
-- The proof is valid for verification, but the birthdate is never revealed
-
----
-
-## 📦 Output format
+## Output Format
 
 Each proof includes:
 
 - The selected rule
 - A cryptographic commitment
 - A validity flag
-- Optional metadata (e.g. timestamp, session ID)
+- Optional metadata such as timestamp or session identifier
 
----
+## Next Step
 
-## ⏭️ Next step
-
-Once the proof is generated, the user can [verify it on-chain](./midnight-verification.md) or use it in an off-chain flow.
+After generating a proof, proceed to [Midnight verification](./midnight-verification.md) or reuse the proof in an off-chain flow.

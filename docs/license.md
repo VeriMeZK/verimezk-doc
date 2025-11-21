@@ -5,13 +5,13 @@ keywords: [VeriMeZK, license, MIT, open source]
 slug: /license
 ---
 
-# 📄 License
+# License
 
 VeriMeZK is released under the **MIT License**.
 
 ---
 
-## 📜 MIT License (excerpt)
+## MIT License (Excerpt)
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy

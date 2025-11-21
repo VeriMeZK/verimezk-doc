@@ -15,31 +15,25 @@ keywords:
 slug: /getting-started/installation
 ---
 
-# 🛠️ Installation Guide
+# Installation Guide
 
-This guide walks you through installing **VeriMeZK** and preparing your environment for development and integration.
+Follow these steps to install **VeriMeZK** and prepare your environment for development or integration work.
 
----
+## Prerequisites
 
-## ✅ Prerequisites
+Ensure your system meets the following requirements before proceeding:
 
-Before installing VeriMeZK, make sure your system meets the following requirements:
-
-- **Node.js** ≥ 18.x
+- **Node.js** version 18 or later
 - **npm** or **yarn**
-- A modern browser (Chrome, Firefox, Brave, etc.)
-- Basic knowledge of JavaScript or TypeScript
-- Optional: familiarity with ZKPs or blockchain concepts
+- A current browser such as Chrome, Firefox, or Brave
+- Working knowledge of JavaScript or TypeScript
+- Optional familiarity with zero-knowledge proofs or blockchain concepts
 
-<div class="tip">
+:::tip
+VeriMeZK runs entirely on the client side. You can experiment without deploying backend services.
+:::
 
-💡 **Tip**: VeriMeZK runs entirely client-side. No backend or server setup is required to start experimenting.
-
-</div>
-
----
-
-## 📦 Installation Steps
+## Installation Steps
 
 ### 1. Clone the repository
 
@@ -68,51 +62,41 @@ yarn install
 npm run dev
 ```
 
-This will launch the local demo interface at `http://localhost:3000`.
+This command starts the local demo interface at `http://localhost:3000`.
 
----
-
-## 🧪 Verify the setup
+## Verify the Setup
 
 Once the app is running:
 
-- You should see the **VeriMeZK demo interface**
-- Try scanning a sample document or uploading a passport image
-- The app will extract MRZ data and prompt for face verification
+- You should see the VeriMeZK demo interface.
+- Test by scanning a sample document or uploading a passport image.
+- The app extracts MRZ data and prompts for face verification.
 
-<div class="tip">
+:::note
+All processing stays on the user's device. No data is sent to external services, including during face verification or proof generation.
+:::
 
-📌 **Note**: All processing happens locally. No data is sent to any server — even during face verification or proof generation.
-
-</div>
-
----
-
-## 🧰 Troubleshooting
+## Troubleshooting
 
 If you encounter issues:
 
-- Make sure your Node version is compatible (`node -v`)
-- Delete `node_modules` and reinstall:
+- Confirm your Node.js version with `node -v`.
+- Delete `node_modules` and reinstall dependencies:
   ```bash
   rm -rf node_modules
   npm install
   ```
-- Check for missing dependencies or peer conflicts in the terminal logs
-- If using Windows, ensure proper permissions for webcam access
+- Review terminal output for missing dependencies or peer conflicts.
+- On Windows, ensure the browser has permission to access the webcam.
 
-<div class="warning">
+:::warning
+Privacy-focused browser extensions may interfere with the webcam or document scanning. Temporarily disable them during testing.
+:::
 
-⚠️ **Warning**: Some browser extensions (like privacy blockers) may interfere with webcam or document scanning. Try disabling them during testing.
+## Next Steps
 
-</div>
+After installation, continue with:
 
----
-
-## 🧩 Next Steps
-
-Once installed, you're ready to explore:
-
-- [Quickstart guide](./quickstart.md)
+- [Quickstart](./quickstart.md)
 - [Core features](../features/document-scanning.md)
 - [Architecture overview](../architecture.md)

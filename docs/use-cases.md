@@ -5,40 +5,30 @@ keywords: [VeriMeZK, use cases, identity, privacy, KYC, dApps]
 slug: /use-cases
 ---
 
-# 🌍 Use Cases
+# Use Cases
 
-VeriMeZK can be used in a wide range of applications that require identity verification without compromising privacy.
+VeriMeZK serves teams that need to confirm identity attributes while maintaining user privacy.
 
----
+## Age-Restricted Access
 
-## 🧑‍⚖️ Age-restricted access
+- Prove a user is over a specific age threshold without sharing a birthdate.
+- Enforce compliance for gaming, alcohol, or content platforms.
 
-- Prove user is over 18 or 21
-- No need to reveal birthdate
+## KYC for DeFi
 
----
+- Confirm nationality or document validity for protocol onboarding.
+- Avoid retaining personally identifiable information.
 
-## 🏦 KYC for DeFi
+## DAO Voting
 
-- Verify nationality or document validity
-- No data storage required
+- Ensure only verified members participate in governance.
+- Reduce Sybil attacks by requiring verifiable participation credentials.
 
----
+## Custom Logic
 
-## 🗳️ DAO voting
+- Combine checks such as "from France" and "over 18."
+- Require both document validity and a biometric match for high-trust flows.
 
-- Restrict voting to verified users
-- Prevent Sybil attacks
+## Developer Integrations
 
----
-
-## 🧩 Custom logic
-
-- “Is from France AND over 18”
-- “Document is valid AND face matches”
-
----
-
-## 🧑‍💻 Developer tools
-
-- Integrate into wallets, dApps, onboarding flows
+- Embed into wallets, decentralized applications, and onboarding experiences.

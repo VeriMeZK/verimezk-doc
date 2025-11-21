@@ -5,31 +5,25 @@ keywords: [VeriMeZK, SDK, integration, API, identity, zero-knowledge]
 slug: /api/sdk-overview
 ---
 
-# 🧰 SDK Overview
+# SDK Overview
 
-The VeriMeZK SDK allows developers to integrate identity verification into their apps using simple, privacy-first APIs.
+The VeriMeZK SDK helps developers integrate privacy-first identity verification using a concise API surface.
 
----
-
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @verimezk/sdk
 ```
 
----
-
-## 🧱 Modules
+## Modules
 
 - `scanDocument()`
 - `verifyFace()`
 - `generateProof(rule)`
 - `verifyProof(proof)`
 
----
+## Use Cases
 
-## 🧩 Use Cases
-
-- dApps requiring age verification
-- Web apps needing KYC without storing data
-- Wallet-based onboarding flows
+- dApps that require age or residency verification
+- Web applications delivering KYC flows without storing data
+- Wallet-based onboarding experiences that prioritise privacy

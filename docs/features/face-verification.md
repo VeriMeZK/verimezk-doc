@@ -12,59 +12,45 @@ keywords:
 slug: /features/face-verification
 ---
 
-# 🧑‍🦰 Face Verification
+# Face Verification
 
-After scanning the identity document, VeriMeZK performs **face verification** to ensure the user is real and matches the document photo.
+After scanning an identity document, VeriMeZK performs **face verification** to ensure the user is present and matches the document photo.
 
----
+## Goals
 
-## 🎯 Goals
+- Confirm the user is physically present through liveness checks.
+- Match the live face with the document image.
+- Prevent spoofing attempts such as printed photos or deepfakes.
 
-- Confirm the user is physically present (liveness detection)
-- Match the live face with the document photo
-- Prevent spoofing (e.g. printed photos, deepfakes)
+## How It Works
 
----
+1. The user grants camera access.
+2. The system captures a live video stream.
+3. Liveness detection prompts the user (for example, blink or turn).
+4. Biometric matching compares:
+   - The live capture
+   - The document image (from the MRZ or embedded chip)
 
-## 🧬 How it works
+:::tip
+The face verification module is optimised for speed and privacy, with all processing completed locally.
+:::
 
-1. The user grants camera access
-2. The system captures a live video stream
-3. Liveness detection is performed (e.g. blink, head turn)
-4. A biometric match is computed between:
-   - The live face
-   - The document photo (from MRZ or chip)
+## Privacy and Security
 
-<div class="tip">
+- No face data is uploaded or persisted.
+- External API calls are not required.
+- Only a yes/no match result is used for subsequent proof generation.
 
-💡 **Tip**: The face verification module is optimized for speed and privacy. All processing is done locally.
+## Troubleshooting
 
-</div>
+- Provide even lighting and a neutral background.
+- Remove sunglasses, masks, or hats when possible.
+- Use a high-resolution webcam for best results.
 
----
+:::warning
+If liveness detection fails, the user is prompted to retry. This prevents spoofing and maintains verification integrity.
+:::
 
-## 🔒 Privacy & Security
+## Next Step
 
-- No face data is uploaded or stored
-- No external API calls are made
-- Only a **yes/no match result** is used for proof generation
-
----
-
-## 🧰 Troubleshooting
-
-- Ensure good lighting and a neutral background
-- Avoid sunglasses, masks, or hats
-- Use a high-resolution webcam if possible
-
-<div class="warning">
-
-⚠️ **Warning**: If liveness detection fails, the user will be prompted to retry. This is a security measure to prevent spoofing.
-
-</div>
-
----
-
-## ⏭️ Next step
-
-Once the face is verified, the user can [generate a ZK proof](./proof-generation.md) based on selected identity attributes.
+Once face verification succeeds, proceed to [generate a ZK proof](./proof-generation.md) for the selected identity attribute.

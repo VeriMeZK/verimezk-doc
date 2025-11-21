@@ -5,7 +5,7 @@ keywords: [VeriMeZK, SDK, API, methods, reference]
 slug: /api/methods
 ---
 
-# 📘 SDK Methods
+# SDK Methods
 
 ## `scanDocument()`
 

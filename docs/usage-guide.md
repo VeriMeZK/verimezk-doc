@@ -5,42 +5,27 @@ keywords: [VeriMeZK, usage, guide, flow, identity, verification]
 slug: /usage-guide
 ---
 
-# 🧭 Usage Guide
+# Usage Guide
 
-This guide summarizes the full user flow in VeriMeZK — from document scan to proof verification.
+This guide walks through the complete VeriMeZK flow, from scanning a document to verifying a proof.
 
----
+## User Flow
 
-## 🧑‍💻 User Flow
+1. **Scan the document** to extract MRZ data.
+2. **Verify the face** to confirm liveness and a biometric match.
+3. **Select a rule** that defines the attribute to prove (for example, over 18).
+4. **Generate the proof** locally on the user's device.
+5. **Verify the proof** either on-chain via Midnight or off-chain within your application.
 
-1. **Scan Document**  
-   → Extract MRZ data
+## Example: Over-18 Verification
 
-2. **Verify Face**  
-   → Confirm liveness and match
+- The user scans a passport.
+- Face verification succeeds.
+- The "Over 18" rule is selected.
+- A proof is generated locally.
+- The proof is verified on-chain for access control.
 
-3. **Select Rule**  
-   → Choose what to prove (e.g. over 18)
+## Reusability Considerations
 
-4. **Generate Proof**  
-   → ZKP created locally
-
-5. **Verify Proof**  
-   → On-chain (Midnight) or off-chain
-
----
-
-## 🧪 Example: Over 18 Check
-
-- User scans passport
-- Face is verified
-- Rule “Over 18” selected
-- Proof is generated
-- Proof is verified on-chain
-
----
-
-## 🔁 Reusability
-
-- Proofs can be reused across apps
-- Rules can be customized
+- Proofs can be trusted across multiple applications.
+- Rules can be tailored to specific compliance or product needs.
